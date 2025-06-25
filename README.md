@@ -24,6 +24,8 @@ This guide provides detailed instructions for converting ASTRONEER's Simplified 
    [GAME_INSTALL_LOCATION]\ASTRONEER\
    ```
 
+**Note:** To restore the original game files, simply remove the `zzz_ASTRONEER_zh-HK_p.pak` file from the installation directory.
+
 ## Development Guide
 
 ### 1. Extracting Game Files
