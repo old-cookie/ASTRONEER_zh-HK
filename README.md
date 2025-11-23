@@ -1,6 +1,6 @@
 # ASTRONEER Simplified Chinese to Traditional Chinese Localization Guide
 
-Last Updated: June 25, 2025
+Last Updated: Nov 23, 2026
 
 ## Overview
 
@@ -10,9 +10,8 @@ This guide provides detailed instructions for converting ASTRONEER's Simplified 
 
 - ASTRONEER game installation
 - Required Tools:
-  - [QuickBMS](https://aluigi.altervista.org/papers/quickbms.zip)
-  - [Unreal Tournament 4 BMS Script](https://aluigi.altervista.org/bms/unreal_tournament_4.bms)
-  - [UnrealLocresEditor v1.4.1](https://github.com/Snoozeds/UnrealLocresEditor/releases/download/1.4.1/UnrealLocresEditor-1.4.1-win-x64.zip)
+  - [Game Extractor](https://www.watto.org/game_extractor.html)
+  - [UnrealLocresEditor v1.4.6](https://github.com/Snoozeds/UnrealLocresEditor/releases/download/1.4.6/UnrealLocresEditor-1.4.6-win-x64.zip)
   - [UnrealPak Utility](https://github.com/RiotOreO/unrealpak/archive/refs/heads/main.zip)
 
 ## Installation
@@ -29,23 +28,13 @@ This guide provides detailed instructions for converting ASTRONEER's Simplified 
 ## Development Guide
 
 ### 1. Extracting Game Files
-
-1. Extract QuickBMS to a local directory
-2. Launch `quickbms_4gb_files.exe`
-3. Select the BMS script: `unreal_tournament_4.bms`
-4. When prompted, select the game PAK file:
-
-   ```
-   [GAME_INSTALL_LOCATION]\ASTRONEER\Astro\Content\Paks\Astro-WindowsNoEditor.pak
-   ```
-
-5. Choose an extraction directory (referred to as [TEMP])
+Use Game Extractor
 
 ### 2. Localization Process
 
 #### 2.1 Engine Localization
 
-1. Install UnrealLocresEditor v1.4.1
+1. Install UnrealLocresEditor v1.4.6
 2. Launch `UnrealLocresEditor.Desktop.exe`
 3. Confirm the download of `UnrealLocres.exe` when prompted
 4. Open the Engine localization file:
@@ -59,21 +48,6 @@ This guide provides detailed instructions for converting ASTRONEER's Simplified 
 
    ```
    zzz_[MOD_NAME]_p\Astro\Content\Localization\Game\zh-Hans\Engine.locres
-   ```
-
-#### 2.2 Game Localization
-
-1. Repeat the process for Game.locres
-2. Open source file:
-
-   ```
-   [TEMP]\mod\Engine\Content\Localization\Engine\zh-Hans\Game.locres
-   ```
-
-3. Export to:
-
-   ```
-   zzz_[MOD_NAME]_p\Engine\Content\Localization\Engine\zh-Hans\Engine.locres
    ```
 
 ### 3. File Structure
@@ -106,12 +80,6 @@ zzz_[MOD_NAME]_p/
    "[UNREALPAK_LOCATION]\unrealpak-main\UnrealPak.exe" "[MOD_LOCATION]\zzz_[MOD_NAME]_p.pak" -create=filelist.txt -compress
    ```
 
-## Troubleshooting
-
-- If QuickBMS fails to extract files, ensure you have sufficient disk space and appropriate permissions
-- For UnrealLocresEditor issues, verify you have the latest .NET runtime installed
-- If the PAK file doesn't load in-game, check file naming and directory structure
-
 ## Technical Notes
 
 - File naming is critical:
@@ -124,6 +92,5 @@ zzz_[MOD_NAME]_p/
 
 This guide is tested with:
 
-- ASTRONEER v1.32.19.0
-- UnrealLocresEditor v1.4.1
-- QuickBMS v0.12
+- ASTRONEER v1.36.43.0
+- UnrealLocresEditor v1.4.6
