@@ -28,26 +28,27 @@ This guide provides detailed instructions for converting ASTRONEER's Simplified 
 ## Development Guide
 
 ### 1. Extracting Game Files
+
 Use Game Extractor
 
 ### 2. Localization Process
 
-#### 2.1 Engine Localization
+#### 2.1 Game Localization
 
 1. Install UnrealLocresEditor v1.4.6
 2. Launch `UnrealLocresEditor.Desktop.exe`
 3. Confirm the download of `UnrealLocres.exe` when prompted
-4. Open the Engine localization file:
+4. Open the Game localization file:
 
    ```
-   [TEMP]\Engine\Content\Localization\Engine\zh-Hans\Engine.locres
+   [TEMP]\Astro\Content\Localization\Game\zh-Hans\Game.locres
    ```
 
 5. Perform the translation
 6. Export the modified locres file to:
 
    ```
-   zzz_[MOD_NAME]_p\Astro\Content\Localization\Game\zh-Hans\Engine.locres
+   zzz_[MOD_NAME]_p\Astro\Content\Localization\Game\zh-Hans\Game.locres
    ```
 
 ### 3. File Structure
@@ -56,18 +57,12 @@ Ensure your mod directory follows this exact structure:
 
 ```
 zzz_[MOD_NAME]_p/
-├── Astro/
-│   └── Content/
-│       └── Localization/
-│           └── Game/
-│               └── zh-Hans/
-│                   └── Game.locres
-└── Engine/
+└── Astro/
     └── Content/
         └── Localization/
-            └── Engine/
+            └── Game/
                 └── zh-Hans/
-                    └── Engine.locres
+                    └── Game.locres
 ```
 
 ### 4. Creating the PAK File
